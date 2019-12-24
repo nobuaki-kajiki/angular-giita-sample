@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="title">商品編集</div>
+    <form class="edit-form" (ngSubmit)="savaProduct()">
+        <div class="edit-line">
+            <label>ID</label>
+            <span>1</span>
+        </div>
+        <div class="edit-line">
+            <label>名前</label>
+            <input type="text" name="name" [(ngModel)]="product.name">
+        </div>
+        <div class="edit-line">
+            <label>価格</label>
+            <input type="number" name="price" [(ngModel)]="product.price">
+        </div>
+        <div class="edit-line">
+            <label>説明</label>
+            <input type="text" name="discription" [(ngModel)]="product.discription">
+        </div>
+    </form>
+    <div class="footer">
+        <div class="button black" routerLink="/products" (click)="saveProduct()">保存</div>
+    </div>
+</div>
