@@ -3,7 +3,7 @@
     <form class="edit-form" (ngSubmit)="savaProduct()">
         <div class="edit-line">
             <label>ID</label>
-            <span>1</span>
+            <span>{{product.id}}</span>
         </div>
         <div class="edit-line">
             <label>名前</label>
@@ -19,6 +19,7 @@
         </div>
     </form>
     <div class="footer">
+        <span class="button white" [routerLink]="['/products', product.id]">キャンセル</span>
         <div class="button black" routerLink="/products" (click)="saveProduct()">保存</div>
     </div>
 </div>
